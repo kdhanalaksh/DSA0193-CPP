@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+class Shape {
+public:
+    Shape(double radius) {
+        std::cout << "Area of Circle: " << 3.14 * radius * radius << std::endl;
+    }
+
+    Shape(double length, double breadth) {
+        std::cout << "Area of Rectangle: " << length * breadth << std::endl;
+    }
+
+    Shape(double a, double b, double c) {
+        double s = (a + b + c) / 2;
+        double area = sqrt(s * (s - a) * (s - b) * (s - c));
+        std::cout << "Area of Triangle: " << area << std::endl;
+    }
+};
+
+int main() {
+    Shape circle(3); // Area of circle with radius 3
+    Shape rectangle(5, 6); // Area of rectangle with length 5 and breadth 6
+    Shape triangle(3, 4, 5); // Area of triangle with sides 3, 4, 5
+
+    return 0;
+}
