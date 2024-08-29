@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstring>
+
+void reverse(char* str) {
+    int n = strlen(str);
+    char* start = str;
+    char* end = str + n - 1;
+    char temp;
+
+    while (end > start) {
+        temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    char str[] = "Hello";
+    reverse(str);
+    std::cout << "Reversed string: " << str << std::endl;
+    return 0;
+}
