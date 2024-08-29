@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main() {
+    int number = 7235;
+    int leastSignificant = number % 10;
+    int nextLeastSignificant = (number / 10) % 10;
+
+    std::cout << "The least significant digit is " << leastSignificant << " The next least significant digit is " << nextLeastSignificant << std::endl;
+
+    return 0;
+}
